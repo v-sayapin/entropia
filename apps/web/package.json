@@ -1,0 +1,10 @@
+{
+  "name": "entropia",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^24.0.0"
+  },
+  "packageManager": "yarn@4.13.0"
+}
