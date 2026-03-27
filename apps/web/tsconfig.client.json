@@ -1,0 +1,20 @@
+{
+	"extends": "./tsconfig.base.json",
+	"include": ["src/client"],
+	"compilerOptions": {
+		"paths": {
+			"src/client/*": ["./src/client/*"]
+		},
+
+		"types": ["vite/client"],
+
+		"target": "ES2022",
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"jsx": "preserve",
+		"jsxImportSource": "solid-js",
+
+		"composite": true,
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.client.tsbuildinfo"
+	}
+}
