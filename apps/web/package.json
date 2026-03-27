@@ -3,6 +3,21 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "yarn clean && tsc -b && vite build",
+    "start": "vite preview",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.12"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.9",
+    "vite-plugin-solid": "^2.11.12"
+  },
   "engines": {
     "node": "^24.0.0"
   },
