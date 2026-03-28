@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch --tsconfig tsconfig.server.json src/server/app/index.ts",
-    "build": "yarn clean && (yarn build:server & yarn build:ssr & yarn build:client)",
+    "build": "yarn clean && tsx tools/build.ts",
     "build:server": "NODE_ENV=production rolldown -c",
     "build:ssr": "NODE_ENV=production vite build --ssr",
     "build:client": "NODE_ENV=production vite build",
