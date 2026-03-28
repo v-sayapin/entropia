@@ -4,7 +4,6 @@ import { defineConfig } from 'rolldown';
 
 const devOnlyPackages = new Set([
 	'@fastify/middie',
-	'fastify-plugin',
 	'vite',
 ]);
 
