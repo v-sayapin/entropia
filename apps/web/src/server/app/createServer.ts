@@ -17,6 +17,7 @@ export const createServer = async (): Promise<FastifyInstance> => {
 			root: clientDistDir,
 			prefix: '/',
 			wildcard: false,
+			preCompressed: true,
 			etag: true,
 			maxAge: '30d',
 			globIgnore: ['**/.vite/**'],
