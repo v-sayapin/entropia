@@ -2,7 +2,7 @@ import { resolve } from 'node:path';
 
 import { defineConfig } from 'rolldown';
 
-const devOnlyPackages = new Set(['@fastify/middie', 'fastify-plugin', 'vite']);
+const devOnlyPackages = new Set(['@fastify/middie', 'vite']);
 
 export default defineConfig({
 	resolve: {
