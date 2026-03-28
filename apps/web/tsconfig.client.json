@@ -1,9 +1,10 @@
 {
 	"extends": "./tsconfig.base.json",
-	"include": ["src/client"],
+	"include": ["src/client", "src/shared", "src/hydrate.tsx", "src/render.tsx"],
 	"compilerOptions": {
 		"paths": {
-			"client/*": ["./src/client/*"]
+			"client/*": ["./src/client/*"],
+			"shared/*": ["./src/shared/*"]
 		},
 
 		"types": ["vite/client"],

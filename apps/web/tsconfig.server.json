@@ -1,0 +1,13 @@
+{
+	"extends": "./tsconfig.base.json",
+	"include": ["src/server", "src/shared"],
+	"compilerOptions": {
+		"paths": {
+			"server/*": ["./src/server/*/index.ts", "./src/server/*"],
+			"shared/*": ["./src/shared/*/index.ts", "./src/shared/*"]
+		},
+
+		"incremental": true,
+		"tsBuildInfoFile": "./node_modules/.cache/ts/tsconfig.server.tsbuildinfo",
+	}
+}

@@ -1,103 +1,13 @@
-import type { Component } from 'solid-js';
-import { createSignal } from 'solid-js';
+/* @refresh reload */
 
-import heroImg from 'client/app/assets/hero.png';
-import solidLogo from 'client/app/assets/solid.svg';
-import viteLogo from 'client/app/assets/vite.svg';
+import type { Component } from 'solid-js';
+
+import type { AppProps } from 'shared/app/types';
+
+import { Content } from 'client/components/Content';
 
 import './App.css';
 
-export const App: Component = () => {
-	const [count, setCount] = createSignal(0);
-
-	return (
-		<>
-			<section id='center'>
-				<div class='hero'>
-					<img src={heroImg} class='base' width='170' height='179' alt='' />
-					<img src={solidLogo} class='framework' alt='Solid logo' />
-					<img src={viteLogo} class='vite' alt='Vite logo' />
-				</div>
-				<div>
-					<h1>Get started</h1>
-					<p>
-						Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-					</p>
-				</div>
-				<button class='counter' onClick={() => setCount((count) => count + 1)}>
-					Count is {count()}
-				</button>
-			</section>
-
-			<div class='ticks' />
-
-			<section id='next-steps'>
-				<div id='docs'>
-					<svg class='icon' role='presentation' aria-hidden='true'>
-						<use href='/icons.svg#documentation-icon' />
-					</svg>
-					<h2>Documentation</h2>
-					<p>Your questions, answered</p>
-					<ul>
-						<li>
-							<a href='https://vite.dev/' target='_blank'>
-								<img class='logo' src={viteLogo} alt='' />
-								Explore Vite
-							</a>
-						</li>
-						<li>
-							<a href='https://solidjs.com/' target='_blank'>
-								<img class='button-icon' src={solidLogo} alt='' />
-								Learn more
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div id='social'>
-					<svg class='icon' role='presentation' aria-hidden='true'>
-						<use href='/icons.svg#social-icon' />
-					</svg>
-					<h2>Connect with us</h2>
-					<p>Join the Vite community</p>
-					<ul>
-						<li>
-							<a href='https://github.com/vitejs/vite' target='_blank'>
-								<svg class='button-icon' role='presentation' aria-hidden='true'>
-									<use href='/icons.svg#github-icon' />
-								</svg>
-								GitHub
-							</a>
-						</li>
-						<li>
-							<a href='https://chat.vite.dev/' target='_blank'>
-								<svg class='button-icon' role='presentation' aria-hidden='true'>
-									<use href='/icons.svg#discord-icon' />
-								</svg>
-								Discord
-							</a>
-						</li>
-						<li>
-							<a href='https://x.com/vite_js' target='_blank'>
-								<svg class='button-icon' role='presentation' aria-hidden='true'>
-									<use href='/icons.svg#x-icon' />
-								</svg>
-								X.com
-							</a>
-						</li>
-						<li>
-							<a href='https://bsky.app/profile/vite.dev' target='_blank'>
-								<svg class='button-icon' role='presentation' aria-hidden='true'>
-									<use href='/icons.svg#bluesky-icon' />
-								</svg>
-								Bluesky
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<div class='ticks' />
-			<section id='spacer' />
-		</>
-	);
+export const App: Component<AppProps> = (_props) => {
+	return <Content />;
 };
