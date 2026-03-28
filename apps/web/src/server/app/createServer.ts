@@ -15,6 +15,7 @@ export const createServer = async () => {
 			root: clientDistDir,
 			prefix: '/',
 			wildcard: false,
+			preCompressed: true,
 			etag: true,
 			maxAge: '30d',
 			globIgnore: ['**/.vite/**'],

@@ -39,6 +39,7 @@ const RAW_RUNTIME_STATE =
           ["tsx", "npm:4.21.0"],\
           ["typescript", "patch:typescript@npm%3A6.0.2#optional!builtin<compat/typescript>::version=6.0.2&hash=5786d5"],\
           ["vite", "virtual:7795c1567a8ad5b5ca8cf9511ac706ca0fa5ca7d446a7eb2a53a2f760156f6ecbb058c884f1674de68a1a3d484ced5f7404b8da8a5fe11a275697142f4fc53da#npm:8.0.3"],\
+          ["vite-plugin-compression2", "npm:2.5.3"],\
           ["vite-plugin-solid", "virtual:7795c1567a8ad5b5ca8cf9511ac706ca0fa5ca7d446a7eb2a53a2f760156f6ecbb058c884f1674de68a1a3d484ced5f7404b8da8a5fe11a275697142f4fc53da#npm:2.11.11"]\
         ],\
         "linkType": "SOFT"\
@@ -954,6 +955,31 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@rollup/pluginutils", [\
+      ["npm:5.3.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@rollup-pluginutils-npm-5.3.0-41141e497e-10c0.zip/node_modules/@rollup/pluginutils/",\
+        "packageDependencies": [\
+          ["@rollup/pluginutils", "npm:5.3.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:d3491b5d3f5b9ad5cddb13c8bbfe586de12094d0578f44138c7fea253350b27c2a4a7ed0a05029c2355e3f10f0bc46eca4fc258dc8dda13da7f0dc7ec87fdba5#npm:5.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/@rollup-pluginutils-virtual-fcc2570cb7/5/.yarn/berry/cache/@rollup-pluginutils-npm-5.3.0-41141e497e-10c0.zip/node_modules/@rollup/pluginutils/",\
+        "packageDependencies": [\
+          ["@rollup/pluginutils", "virtual:d3491b5d3f5b9ad5cddb13c8bbfe586de12094d0578f44138c7fea253350b27c2a4a7ed0a05029c2355e3f10f0bc46eca4fc258dc8dda13da7f0dc7ec87fdba5#npm:5.3.0"],\
+          ["@types/estree", "npm:1.0.8"],\
+          ["@types/rollup", null],\
+          ["estree-walker", "npm:2.0.2"],\
+          ["picomatch", "npm:4.0.4"],\
+          ["rollup", null]\
+        ],\
+        "packagePeers": [\
+          "@types/rollup",\
+          "rollup"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@tybys/wasm-util", [\
       ["npm:0.10.1", {\
         "packageLocation": "../../../../.yarn/berry/cache/@tybys-wasm-util-npm-0.10.1-607c8a7e5c-10c0.zip/node_modules/@tybys/wasm-util/",\
@@ -1005,6 +1031,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@babel/types", "npm:7.29.0"],\
           ["@types/babel__traverse", "npm:7.28.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/estree", [\
+      ["npm:1.0.8", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@types-estree-npm-1.0.8-2195bac6d6-10c0.zip/node_modules/@types/estree/",\
+        "packageDependencies": [\
+          ["@types/estree", "npm:1.0.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1353,6 +1388,7 @@ const RAW_RUNTIME_STATE =
           ["tsx", "npm:4.21.0"],\
           ["typescript", "patch:typescript@npm%3A6.0.2#optional!builtin<compat/typescript>::version=6.0.2&hash=5786d5"],\
           ["vite", "virtual:7795c1567a8ad5b5ca8cf9511ac706ca0fa5ca7d446a7eb2a53a2f760156f6ecbb058c884f1674de68a1a3d484ced5f7404b8da8a5fe11a275697142f4fc53da#npm:8.0.3"],\
+          ["vite-plugin-compression2", "npm:2.5.3"],\
           ["vite-plugin-solid", "virtual:7795c1567a8ad5b5ca8cf9511ac706ca0fa5ca7d446a7eb2a53a2f760156f6ecbb058c884f1674de68a1a3d484ced5f7404b8da8a5fe11a275697142f4fc53da#npm:2.11.11"]\
         ],\
         "linkType": "SOFT"\
@@ -1416,6 +1452,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../.yarn/berry/cache/escape-html-npm-1.0.3-376c22ee74-10c0.zip/node_modules/escape-html/",\
         "packageDependencies": [\
           ["escape-html", "npm:1.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["estree-walker", [\
+      ["npm:2.0.2", {\
+        "packageLocation": "../../../../.yarn/berry/cache/estree-walker-npm-2.0.2-dfab42f65c-10c0.zip/node_modules/estree-walker/",\
+        "packageDependencies": [\
+          ["estree-walker", "npm:2.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2580,6 +2625,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["tar-mini", [\
+      ["npm:0.2.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/tar-mini-npm-0.2.0-335b4452f6-10c0.zip/node_modules/tar-mini/",\
+        "packageDependencies": [\
+          ["tar-mini", "npm:0.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["thread-stream", [\
       ["npm:4.0.0", {\
         "packageLocation": "../../../../.yarn/berry/cache/thread-stream-npm-4.0.0-434fd14478-10c0.zip/node_modules/thread-stream/",\
@@ -2748,6 +2802,17 @@ const RAW_RUNTIME_STATE =
           "terser",\
           "tsx",\
           "yaml"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["vite-plugin-compression2", [\
+      ["npm:2.5.3", {\
+        "packageLocation": "../../../../.yarn/berry/cache/vite-plugin-compression2-npm-2.5.3-d3491b5d3f-10c0.zip/node_modules/vite-plugin-compression2/",\
+        "packageDependencies": [\
+          ["@rollup/pluginutils", "virtual:d3491b5d3f5b9ad5cddb13c8bbfe586de12094d0578f44138c7fea253350b27c2a4a7ed0a05029c2355e3f10f0bc46eca4fc258dc8dda13da7f0dc7ec87fdba5#npm:5.3.0"],\
+          ["tar-mini", "npm:0.2.0"],\
+          ["vite-plugin-compression2", "npm:2.5.3"]\
         ],\
         "linkType": "HARD"\
       }]\

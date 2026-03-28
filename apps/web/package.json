@@ -25,6 +25,7 @@
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
     "vite": "^8.0.3",
+    "vite-plugin-compression2": "^2.5.3",
     "vite-plugin-solid": "^2.11.11"
   },
   "engines": {
