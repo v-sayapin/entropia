@@ -1,8 +1,8 @@
-import fastifyStatic from '@fastify/static';
 import Fastify from 'fastify';
 
+import { staticPlugin } from 'src/server/app/plugins/static';
 import { getSsrProcessor } from 'src/server/app/ssr';
-import { clientDistDir, isProduction } from 'src/server/utils/env';
+import { isProduction } from 'src/server/utils/env';
 
 export const createServer = async () => {
 	const app = Fastify({
@@ -11,15 +11,7 @@ export const createServer = async () => {
 	});
 
 	if (isProduction) {
-		await app.register(fastifyStatic, {
-			root: clientDistDir,
-			prefix: '/',
-			wildcard: false,
-			preCompressed: true,
-			etag: true,
-			maxAge: '30d',
-			globIgnore: ['**/.vite/**'],
-		});
+		await app.register(staticPlugin);
 	} else {
 		const { vitePlugin } = await import('src/server/app/plugins/vite');
 		await app.register(vitePlugin);
