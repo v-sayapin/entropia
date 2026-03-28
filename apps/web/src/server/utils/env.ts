@@ -1,0 +1,10 @@
+import { resolve } from 'node:path';
+
+export const host = process.env.HOST ?? '127.0.0.1';
+export const port = Number(process.env.PORT ?? 3000);
+
+export const isProduction = process.env.NODE_ENV === 'production';
+
+export const rootDir = resolve(process.cwd());
+export const clientDistDir = resolve(rootDir, 'dist/client');
+export const serverDistDir = resolve(rootDir, 'dist/server');

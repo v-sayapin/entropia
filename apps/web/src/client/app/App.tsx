@@ -1,102 +1,42 @@
-import { createSignal } from 'solid-js'
+/* @refresh reload */
 
-import heroImg from 'src/client/app/assets/hero.png';
-import solidLogo from 'src/client/app/assets/solid.svg';
-import viteLogo from 'src/client/app/assets/vite.svg';
+import { For } from 'solid-js';
+import { HydrationScript } from 'solid-js/web';
+
+import { Content } from 'src/client/components/Content';
+import type { AppProps } from 'src/shared/types/app';
 
 import 'src/client/app/App.css';
 
-export const App = () => {
-	const [count, setCount] = createSignal(0)
-
+export const App = (props: AppProps) => {
 	return (
-		<>
-			<section id="center">
-				<div class="hero">
-					<img src={heroImg} class="base" width="170" height="179" alt="" />
-					<img src={solidLogo} class="framework" alt="Solid logo" />
-					<img src={viteLogo} class="vite" alt="Vite logo" />
-				</div>
-				<div>
-					<h1>Get started</h1>
-					<p>
-						Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-					</p>
-				</div>
-				<button class="counter" onClick={() => setCount((count) => count + 1)}>
-					Count is {count()}
-				</button>
-			</section>
+		<html lang='en'>
+		<head>
+			<meta charset='UTF-8' />
+			<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+			<title>entropia</title>
 
-			<div class="ticks"></div>
+			<HydrationScript />
 
-			<section id="next-steps">
-				<div id="docs">
-					<svg class="icon" role="presentation" aria-hidden="true">
-						<use href="/icons.svg#documentation-icon"></use>
-					</svg>
-					<h2>Documentation</h2>
-					<p>Your questions, answered</p>
-					<ul>
-						<li>
-							<a href="https://vite.dev/" target="_blank">
-								<img class="logo" src={viteLogo} alt="" />
-								Explore Vite
-							</a>
-						</li>
-						<li>
-							<a href="https://solidjs.com/" target="_blank">
-								<img class="button-icon" src={solidLogo} alt="" />
-								Learn more
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div id="social">
-					<svg class="icon" role="presentation" aria-hidden="true">
-						<use href="/icons.svg#social-icon"></use>
-					</svg>
-					<h2>Connect with us</h2>
-					<p>Join the Vite community</p>
-					<ul>
-						<li>
-							<a href="https://github.com/vitejs/vite" target="_blank">
-								<svg class="button-icon" role="presentation" aria-hidden="true">
-									<use href="/icons.svg#github-icon"></use>
-								</svg>
-								GitHub
-							</a>
-						</li>
-						<li>
-							<a href="https://chat.vite.dev/" target="_blank">
-								<svg class="button-icon" role="presentation" aria-hidden="true">
-									<use href="/icons.svg#discord-icon"></use>
-								</svg>
-								Discord
-							</a>
-						</li>
-						<li>
-							<a href="https://x.com/vite_js" target="_blank">
-								<svg class="button-icon" role="presentation" aria-hidden="true">
-									<use href="/icons.svg#x-icon"></use>
-								</svg>
-								X.com
-							</a>
-						</li>
-						<li>
-							<a href="https://bsky.app/profile/vite.dev" target="_blank">
-								<svg class="button-icon" role="presentation" aria-hidden="true">
-									<use href="/icons.svg#bluesky-icon"></use>
-								</svg>
-								Bluesky
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
+			<For each={props.styles}>
+				{(href) => <link rel='preload' href={href} as='style' type='text/css' fetchpriority='high' />}
+			</For>
+			{props.entry && <link rel='modulepreload' href={props.entry} fetchpriority='high' />}
 
-			<div class="ticks"></div>
-			<section id="spacer"></section>
-		</>
-	)
+			<For each={props.modulePreloads}>{(href) => <link rel='modulepreload' href={href} />}</For>
+			<For each={props.preloads}>
+				{({ href, as, type }) => <link rel='preload' href={href} as={as} type={type} />}
+			</For>
+
+			<For each={props.styles}>{(href) => <link rel='stylesheet' href={href} />}</For>
+			{props.entry && <script type='module' src={props.entry} defer />}
+		</head>
+		<body>
+		<div id='root'>
+			<Content />
+		</div>
+		</body>
+		</html>
+	);
 };
