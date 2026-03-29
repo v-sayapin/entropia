@@ -33,7 +33,7 @@ export default defineConfig(({ isSsrBuild }) => ({
 		manifest: !isSsrBuild,
 		copyPublicDir: !isSsrBuild,
 		minify: !isSsrBuild,
-		sourcemap: isSsrBuild || process.env['NODE_ENV'] !== 'production' ? 'hidden' : false,
+		sourcemap: isSsrBuild || process.env.NODE_ENV !== 'production' ? 'hidden' : false,
 		rolldownOptions: {
 			input: resolve(import.meta.dirname, 'src', isSsrBuild ? 'render.tsx' : 'hydrate.tsx'),
 		},

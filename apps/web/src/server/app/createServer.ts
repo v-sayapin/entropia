@@ -1,7 +1,6 @@
 import Fastify from 'fastify';
 import type { FastifyInstance } from 'fastify';
 
-import { isProduction } from 'server/app/env';
 import { staticPlugin } from 'server/app/plugins/static';
 import { getSsrProcessor } from 'server/app/ssr';
 
@@ -11,7 +10,7 @@ export const createServer = async (): Promise<FastifyInstance> => {
 		exposeHeadRoutes: false,
 	});
 
-	if (isProduction) {
+	if (process.env.NODE_ENV === 'production') {
 		await app.register(staticPlugin);
 	} else {
 		const { vitePlugin } = await import('server/app/plugins/vite');
