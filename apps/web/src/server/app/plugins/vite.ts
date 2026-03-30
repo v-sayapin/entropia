@@ -3,8 +3,8 @@ import { resolve } from 'node:path';
 import middie from '@fastify/middie';
 import type { FastifyPluginAsync } from 'fastify';
 import plugin from 'fastify-plugin';
-import type { ViteDevServer } from 'vite';
 import { createServer } from 'vite';
+import type { ViteDevServer } from 'vite';
 
 declare module 'fastify' {
 	interface FastifyInstance {

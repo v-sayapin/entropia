@@ -4,7 +4,11 @@ import { join } from 'node:path';
 import type { Manifest } from 'vite';
 
 import { getAssetPreloads } from 'src/server/app/ssr/hydrationResources/prod/assets';
-import type { EntryResources, HydrationResourcesGetter, Resources } from 'src/server/app/ssr/hydrationResources/types';
+import type {
+	EntryResources,
+	HydrationResourcesGetter,
+	Resources,
+} from 'src/server/app/ssr/hydrationResources/types';
 
 const loadClientManifest = async (root: string): Promise<Manifest> =>
 	JSON.parse(await readFile(join(root, '.vite', 'manifest.json'), 'utf-8'));

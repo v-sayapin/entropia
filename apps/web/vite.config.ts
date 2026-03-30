@@ -1,9 +1,9 @@
 import { resolve } from 'node:path';
+import zlib from 'zlib';
 
 import { defineConfig } from 'vite';
 import { compression, defineAlgorithm } from 'vite-plugin-compression2';
 import solid from 'vite-plugin-solid';
-import zlib from 'zlib';
 
 const srcDir = resolve(import.meta.dirname, 'src');
 
