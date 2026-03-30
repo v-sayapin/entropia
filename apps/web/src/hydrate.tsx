@@ -10,7 +10,9 @@ if (!rootElement) {
 	throw new Error('Missing #root element for hydration');
 }
 
-const Dummy: ParentComponent = (props) => props.children;
+const Dummy: ParentComponent = (props) =>
+	// oxlint-disable-next-line solid/reactivity
+	props.children;
 
 // Passthrough component used only to align Solid hydration keys with the server-side tree.
 // Do not remove unless the server wrapper structure changes.

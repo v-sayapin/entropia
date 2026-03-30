@@ -11,6 +11,9 @@
     "build:client": "NODE_ENV=production vite build",
     "start": "NODE_ENV=production node dist/server/index.js",
     "clean": "rm -rf dist",
+    "typecheck": "tsc --build --noEmit",
+    "lint:js": "oxlint --fix",
+    "lint:js:check": "oxlint",
     "format": "oxfmt",
     "format:check": "oxfmt --check"
   },
@@ -24,13 +27,21 @@
     "@fastify/middie": "^9.3.2",
     "@types/connect": "^3.4.38",
     "@types/node": "^25.6.0",
+    "eslint": "^10.2.1",
+    "eslint-plugin-solid": "^0.14.5",
     "oxfmt": "^0.46.0",
+    "oxlint": "^1.61.0",
     "rolldown": "^1.0.0-rc.16",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3",
     "vite": "^8.0.9",
     "vite-plugin-compression2": "^2.5.3",
     "vite-plugin-solid": "^2.11.12"
+  },
+  "dependenciesMeta": {
+    "eslint-plugin-solid@0.14.5": {
+      "unplugged": true
+    }
   },
   "engines": {
     "node": "^24.0.0"

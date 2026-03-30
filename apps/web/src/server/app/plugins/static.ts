@@ -11,9 +11,12 @@ import { clientDistDir } from 'server/app/env';
 const ONE_DAY = 60 * 60 * 24;
 const ONE_YEAR = 60 * 60 * 24 * 365;
 
-const toPublicPath = (path: string) => relative(clientDistDir, path).split(sep).join('/');
+const toPublicPath = (path: string): string => relative(clientDistDir, path).split(sep).join('/');
 
-const appendHeaderToken = (currentValue: ReturnType<FastifyReply['getHeader']>, token: string) => {
+const appendHeaderToken = (
+	currentValue: ReturnType<FastifyReply['getHeader']>,
+	token: string
+): string => {
 	const tokens = new Set(
 		(currentValue ?? '')
 			.toString()
@@ -25,9 +28,9 @@ const appendHeaderToken = (currentValue: ReturnType<FastifyReply['getHeader']>, 
 	return [...tokens].join(', ');
 };
 
-const isImmutableAsset = (publicPath: string) => publicPath.startsWith('assets/');
+const isImmutableAsset = (publicPath: string): boolean => publicPath.startsWith('assets/');
 
-const setHeaders = (res: SetHeadersResponse, path: string, _stat: Stats) => {
+const setHeaders = (res: SetHeadersResponse, path: string, _stat: Stats): void => {
 	const publicPath = toPublicPath(path);
 
 	res.setHeader('Vary', appendHeaderToken(res.getHeader('Vary'), 'Accept-Encoding'));
