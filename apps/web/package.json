@@ -10,7 +10,9 @@
     "build:ssr": "NODE_ENV=production vite build --ssr",
     "build:client": "NODE_ENV=production vite build",
     "start": "NODE_ENV=production node dist/server/index.js",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "fmt": "oxfmt",
+    "fmt-check": "oxfmt --check"
   },
   "dependencies": {
     "@fastify/static": "^9.0.0",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@fastify/middie": "^9.3.1",
     "@types/node": "^25.5.0",
+    "oxfmt": "^0.42.0",
     "rolldown": "^1.0.0-rc.12",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",

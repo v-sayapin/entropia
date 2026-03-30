@@ -12,6 +12,7 @@ export const createHydrationResourcesGetter = async (
 		return createProdHydrationResourcesGetter(clientDistDir, entryId);
 	}
 	const vite = app.getDecorator<ViteDevServer>('vite');
-	const { createDevHydrationResourcesGetter } = await import('src/server/app/ssr/hydrationResources/dev');
+	const { createDevHydrationResourcesGetter } =
+		await import('src/server/app/ssr/hydrationResources/dev');
 	return createDevHydrationResourcesGetter(entryId, vite);
 };

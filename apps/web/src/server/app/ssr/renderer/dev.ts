@@ -1,7 +1,7 @@
 import { resolve } from 'node:path';
 
-import type { ViteDevServer } from 'vite';
 import { isRunnableDevEnvironment } from 'vite';
+import type { ViteDevServer } from 'vite';
 
 import type { RenderModule } from 'src/server/app/ssr/renderer/types';
 import { rootDir } from 'src/server/utils/env';
@@ -14,5 +14,6 @@ export const createDevRendererGetter = async (vite: ViteDevServer) => {
 		throw new Error('Expected a runnable SSR environment in dev');
 	}
 
-	return async () => ((await ssrEnvironment.runner.import(devRenderEntry)) as RenderModule).render;
+	return async () =>
+		((await ssrEnvironment.runner.import(devRenderEntry)) as RenderModule).render;
 };
