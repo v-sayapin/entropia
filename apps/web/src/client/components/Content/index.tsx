@@ -28,12 +28,12 @@ export const Content = () => {
 				</button>
 			</section>
 
-			<div class='ticks'></div>
+			<div class='ticks' />
 
 			<section id='next-steps'>
 				<div id='docs'>
 					<svg class='icon' role='presentation' aria-hidden='true'>
-						<use href='/icons.svg#documentation-icon'></use>
+						<use href='/icons.svg#documentation-icon' />
 					</svg>
 					<h2>Documentation</h2>
 					<p>Your questions, answered</p>
@@ -54,7 +54,7 @@ export const Content = () => {
 				</div>
 				<div id='social'>
 					<svg class='icon' role='presentation' aria-hidden='true'>
-						<use href='/icons.svg#social-icon'></use>
+						<use href='/icons.svg#social-icon' />
 					</svg>
 					<h2>Connect with us</h2>
 					<p>Join the Vite community</p>
@@ -62,7 +62,7 @@ export const Content = () => {
 						<li>
 							<a href='https://github.com/vitejs/vite' target='_blank'>
 								<svg class='button-icon' role='presentation' aria-hidden='true'>
-									<use href='/icons.svg#github-icon'></use>
+									<use href='/icons.svg#github-icon' />
 								</svg>
 								GitHub
 							</a>
@@ -70,7 +70,7 @@ export const Content = () => {
 						<li>
 							<a href='https://chat.vite.dev/' target='_blank'>
 								<svg class='button-icon' role='presentation' aria-hidden='true'>
-									<use href='/icons.svg#discord-icon'></use>
+									<use href='/icons.svg#discord-icon' />
 								</svg>
 								Discord
 							</a>
@@ -78,7 +78,7 @@ export const Content = () => {
 						<li>
 							<a href='https://x.com/vite_js' target='_blank'>
 								<svg class='button-icon' role='presentation' aria-hidden='true'>
-									<use href='/icons.svg#x-icon'></use>
+									<use href='/icons.svg#x-icon' />
 								</svg>
 								X.com
 							</a>
@@ -86,7 +86,7 @@ export const Content = () => {
 						<li>
 							<a href='https://bsky.app/profile/vite.dev' target='_blank'>
 								<svg class='button-icon' role='presentation' aria-hidden='true'>
-									<use href='/icons.svg#bluesky-icon'></use>
+									<use href='/icons.svg#bluesky-icon' />
 								</svg>
 								Bluesky
 							</a>
@@ -95,8 +95,8 @@ export const Content = () => {
 				</div>
 			</section>
 
-			<div class='ticks'></div>
-			<section id='spacer'></section>
+			<div class='ticks' />
+			<section id='spacer' />
 		</>
 	);
 };

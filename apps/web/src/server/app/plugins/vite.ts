@@ -7,6 +7,7 @@ import { createServer } from 'vite';
 import type { ViteDevServer } from 'vite';
 
 declare module 'fastify' {
+	// oxlint-disable-next-line typescript/consistent-type-definitions
 	interface FastifyInstance {
 		vite?: ViteDevServer;
 	}
