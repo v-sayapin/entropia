@@ -1,7 +1,7 @@
 /* @refresh reload */
 
-import type { ParentComponent } from 'solid-js';
 import { hydrate } from 'solid-js/web';
+import type { ParentComponent } from 'solid-js';
 
 import { App } from 'client/app/App';
 
@@ -20,7 +20,7 @@ hydrate(
 			<Dummy>
 				<Dummy>
 					<App
-						// TODO: Add app props passthrough for SSR hydration.
+					// TODO: Add app props passthrough for SSR hydration.
 					/>
 				</Dummy>
 			</Dummy>

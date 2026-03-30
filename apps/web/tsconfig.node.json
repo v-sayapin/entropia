@@ -3,6 +3,6 @@
 	"include": ["tools", "*.config.ts", "env.d.ts"],
 	"compilerOptions": {
 		"incremental": true,
-		"tsBuildInfoFile": "./node_modules/.cache/ts/tsconfig.node.tsbuildinfo",
+		"tsBuildInfoFile": "./node_modules/.cache/ts/tsconfig.node.tsbuildinfo"
 	}
 }

@@ -1,10 +1,10 @@
-import type { Stats } from 'node:fs';
 import { relative, sep } from 'node:path';
+import type { Stats } from 'node:fs';
 
-import type { SetHeadersResponse } from '@fastify/static';
 import fastifyStatic from '@fastify/static';
-import type { FastifyPluginAsync, FastifyReply } from 'fastify';
 import plugin from 'fastify-plugin';
+import type { SetHeadersResponse } from '@fastify/static';
+import type { FastifyPluginAsync, FastifyReply } from 'fastify';
 
 import { clientDistDir } from 'server/app/env';
 

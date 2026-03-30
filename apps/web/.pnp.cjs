@@ -35,6 +35,7 @@ const RAW_RUNTIME_STATE =
           ["entropia", "workspace:."],\
           ["fastify", "npm:5.8.5"],\
           ["fastify-plugin", "npm:5.1.0"],\
+          ["oxfmt", "npm:0.46.0"],\
           ["rolldown", "npm:1.0.0-rc.16"],\
           ["solid-js", "npm:1.9.12"],\
           ["tsx", "npm:4.21.0"],\
@@ -775,6 +776,177 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@oxfmt/binding-android-arm-eabi", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-android-arm-eabi-npm-0.46.0-7c4a258daf/node_modules/@oxfmt/binding-android-arm-eabi/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-android-arm-eabi", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-android-arm64", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-android-arm64-npm-0.46.0-96a689ed25/node_modules/@oxfmt/binding-android-arm64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-android-arm64", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-darwin-arm64", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-darwin-arm64-npm-0.46.0-872c7d42f0/node_modules/@oxfmt/binding-darwin-arm64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-darwin-arm64", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-darwin-x64", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-darwin-x64-npm-0.46.0-2613aa9387/node_modules/@oxfmt/binding-darwin-x64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-darwin-x64", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-freebsd-x64", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-freebsd-x64-npm-0.46.0-b210843350/node_modules/@oxfmt/binding-freebsd-x64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-freebsd-x64", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-arm-gnueabihf", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-arm-gnueabihf-npm-0.46.0-a6fdf52dc4/node_modules/@oxfmt/binding-linux-arm-gnueabihf/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-arm-gnueabihf", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-arm-musleabihf", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-arm-musleabihf-npm-0.46.0-421600b925/node_modules/@oxfmt/binding-linux-arm-musleabihf/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-arm-musleabihf", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-arm64-gnu", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-arm64-gnu-npm-0.46.0-a132d58b0b/node_modules/@oxfmt/binding-linux-arm64-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-arm64-gnu", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-arm64-musl", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-arm64-musl-npm-0.46.0-590b2d75a8/node_modules/@oxfmt/binding-linux-arm64-musl/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-arm64-musl", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-ppc64-gnu", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-ppc64-gnu-npm-0.46.0-0ffba3ea2a/node_modules/@oxfmt/binding-linux-ppc64-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-ppc64-gnu", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-riscv64-gnu", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-riscv64-gnu-npm-0.46.0-e778280c1e/node_modules/@oxfmt/binding-linux-riscv64-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-riscv64-gnu", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-riscv64-musl", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-riscv64-musl-npm-0.46.0-a8c96b98b5/node_modules/@oxfmt/binding-linux-riscv64-musl/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-riscv64-musl", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-s390x-gnu", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-s390x-gnu-npm-0.46.0-5b1f595821/node_modules/@oxfmt/binding-linux-s390x-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-s390x-gnu", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-x64-gnu", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-x64-gnu-npm-0.46.0-4247e93487/node_modules/@oxfmt/binding-linux-x64-gnu/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-x64-gnu", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-linux-x64-musl", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-linux-x64-musl-npm-0.46.0-2de3b02595/node_modules/@oxfmt/binding-linux-x64-musl/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-linux-x64-musl", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-openharmony-arm64", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-openharmony-arm64-npm-0.46.0-3ebc5c215e/node_modules/@oxfmt/binding-openharmony-arm64/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-openharmony-arm64", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-win32-arm64-msvc", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-win32-arm64-msvc-npm-0.46.0-0154f76511/node_modules/@oxfmt/binding-win32-arm64-msvc/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-win32-arm64-msvc", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-win32-ia32-msvc", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-win32-ia32-msvc-npm-0.46.0-fc95211af4/node_modules/@oxfmt/binding-win32-ia32-msvc/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-win32-ia32-msvc", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxfmt/binding-win32-x64-msvc", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxfmt-binding-win32-x64-msvc-npm-0.46.0-a9edb754cc/node_modules/@oxfmt/binding-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-win32-x64-msvc", "npm:0.46.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@pinojs/redact", [\
       ["npm:0.4.0", {\
         "packageLocation": "./.yarn/cache/@pinojs-redact-npm-0.4.0-445417bca6-4b311ba17e.zip/node_modules/@pinojs/redact/",\
@@ -1342,6 +1514,7 @@ const RAW_RUNTIME_STATE =
           ["entropia", "workspace:."],\
           ["fastify", "npm:5.8.5"],\
           ["fastify-plugin", "npm:5.1.0"],\
+          ["oxfmt", "npm:0.46.0"],\
           ["rolldown", "npm:1.0.0-rc.16"],\
           ["solid-js", "npm:1.9.12"],\
           ["tsx", "npm:4.21.0"],\
@@ -1979,6 +2152,35 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["oxfmt", [\
+      ["npm:0.46.0", {\
+        "packageLocation": "./.yarn/unplugged/oxfmt-npm-0.46.0-6d84b996ab/node_modules/oxfmt/",\
+        "packageDependencies": [\
+          ["@oxfmt/binding-android-arm-eabi", "npm:0.46.0"],\
+          ["@oxfmt/binding-android-arm64", "npm:0.46.0"],\
+          ["@oxfmt/binding-darwin-arm64", "npm:0.46.0"],\
+          ["@oxfmt/binding-darwin-x64", "npm:0.46.0"],\
+          ["@oxfmt/binding-freebsd-x64", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-arm-gnueabihf", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-arm-musleabihf", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-arm64-gnu", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-arm64-musl", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-ppc64-gnu", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-riscv64-gnu", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-riscv64-musl", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-s390x-gnu", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-x64-gnu", "npm:0.46.0"],\
+          ["@oxfmt/binding-linux-x64-musl", "npm:0.46.0"],\
+          ["@oxfmt/binding-openharmony-arm64", "npm:0.46.0"],\
+          ["@oxfmt/binding-win32-arm64-msvc", "npm:0.46.0"],\
+          ["@oxfmt/binding-win32-ia32-msvc", "npm:0.46.0"],\
+          ["@oxfmt/binding-win32-x64-msvc", "npm:0.46.0"],\
+          ["oxfmt", "npm:0.46.0"],\
+          ["tinypool", "npm:2.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["parse5", [\
       ["npm:7.3.0", {\
         "packageLocation": "./.yarn/cache/parse5-npm-7.3.0-b0410074a3-7fd2e4e247.zip/node_modules/parse5/",\
@@ -2399,6 +2601,15 @@ const RAW_RUNTIME_STATE =
           ["fdir", "virtual:102914a73b14bffc325c2cdf701d5ae063b57309ea75829f709b4273a7ea0d0e11784f2d6f2635e156595ab235d9a24869844d54ab73f4ad81d3a7b01b185214#npm:6.5.0"],\
           ["picomatch", "npm:4.0.4"],\
           ["tinyglobby", "npm:0.2.16"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["tinypool", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "./.yarn/cache/tinypool-npm-2.1.0-e68b5eb405-9fb1c76055.zip/node_modules/tinypool/",\
+        "packageDependencies": [\
+          ["tinypool", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\

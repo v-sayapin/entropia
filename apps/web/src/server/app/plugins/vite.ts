@@ -1,9 +1,9 @@
 import { resolve } from 'node:path';
 
 import middie from '@fastify/middie';
-import type { FastifyPluginAsync } from 'fastify';
 import plugin from 'fastify-plugin';
 import { createServer } from 'vite';
+import type { FastifyPluginAsync } from 'fastify';
 
 import { rootDir } from 'server/app/env';
 

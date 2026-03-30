@@ -2,8 +2,8 @@ import type { FastifyInstance } from 'fastify';
 
 import { clientDistDir } from 'server/app/env';
 import { createHydrationResourcesGetter } from 'server/app/ssr/hydrationResources';
-import type { HydrationResourcesGetter } from 'server/app/ssr/hydrationResources/types';
 import { createRenderFnGetter } from 'server/app/ssr/render';
+import type { HydrationResourcesGetter } from 'server/app/ssr/hydrationResources/types';
 import type { RenderFunctionGetter } from 'server/app/ssr/render/types';
 
 const HYDRATION_ENTRY_ID = 'src/hydrate.tsx';

@@ -8,6 +8,6 @@
 		},
 
 		"incremental": true,
-		"tsBuildInfoFile": "./node_modules/.cache/ts/tsconfig.server.tsbuildinfo",
+		"tsBuildInfoFile": "./node_modules/.cache/ts/tsconfig.server.tsbuildinfo"
 	}
 }

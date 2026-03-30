@@ -1,6 +1,6 @@
-import type { Component } from 'solid-js';
 import { For } from 'solid-js';
 import { Hydration, HydrationScript, NoHydration } from 'solid-js/web';
+import type { Component } from 'solid-js';
 
 import type { DocumentProps } from 'shared/app/types';
 
