@@ -1,0 +1,5 @@
+pre-commit:
+  jobs:
+    - name: lint web app
+      root: apps/web
+      run: yarn lint-staged
