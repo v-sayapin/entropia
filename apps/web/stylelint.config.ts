@@ -5,7 +5,7 @@ const bem = `${kebab}(__${kebab})?(_${kebab}){0,2}`;
 
 const config: Config = {
 	extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
-	ignoreFiles: ['!**/*.css', '.yarn/**', 'node_modules/**', 'dist/**'],
+	ignoreFiles: ['**/*', '!**/*.css', '**/.yarn/**', '**/node_modules/**', '**/dist/**'],
 	rules: {
 		'selector-class-pattern': [
 			`^(${bem})$`,
