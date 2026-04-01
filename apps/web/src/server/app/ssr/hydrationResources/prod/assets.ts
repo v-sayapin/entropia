@@ -1,4 +1,4 @@
-import type { AssetContentType, AssetPreload } from 'src/shared/types/assets';
+import type { AssetContentType, AssetPreload } from 'src/shared/types/hydrationResources';
 
 const CONTENT_TYPES: Record<string, AssetContentType> = {
 	avif: { as: 'image', type: 'image/avif' },
