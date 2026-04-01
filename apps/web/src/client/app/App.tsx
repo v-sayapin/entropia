@@ -1,8 +1,11 @@
 /* @refresh reload */
 
-import { For } from 'solid-js';
 import { HydrationScript } from 'solid-js/web';
 
+import { LinkAssetsPreload } from 'src/client/app/LinkPreload/Assets';
+import { LinkModulesPreload } from 'src/client/app/LinkPreload/Modules';
+import { LinkStylesPreload } from 'src/client/app/LinkPreload/Styles';
+import { LinkStyles } from 'src/client/app/LinkStyles';
 import { Content } from 'src/client/components/Content';
 import type { AppProps } from 'src/shared/types/app';
 
@@ -19,30 +22,25 @@ export const App = (props: AppProps) => {
 
 				<HydrationScript />
 
-				<For each={props.styles}>
-					{(href) => (
-						<link
-							rel='preload'
-							href={href}
-							as='style'
-							type='text/css'
-							fetchpriority='high'
-						/>
-					)}
-				</For>
-				{props.entry && (
-					<link rel='modulepreload' href={props.entry} fetchpriority='high' />
-				)}
+				<LinkStylesPreload styles={props.hydrationResources?.entry.styles} highPriority />
+				<LinkModulesPreload
+					modules={
+						props.hydrationResources?.entry.module
+							? [props.hydrationResources.entry.module]
+							: undefined
+					}
+					highPriority
+				/>
+				<LinkModulesPreload modules={props.hydrationResources?.entry.modulePreloads} />
+				<LinkAssetsPreload assets={props.hydrationResources?.entry.preloads} />
 
-				<For each={props.modulePreloads}>
-					{(href) => <link rel='modulepreload' href={href} />}
-				</For>
-				<For each={props.preloads}>
-					{({ href, as, type }) => <link rel='preload' href={href} as={as} type={type} />}
-				</For>
+				<LinkStylesPreload styles={props.hydrationResources?.route?.styles} />
+				<LinkModulesPreload modules={props.hydrationResources?.route?.modulePreloads} />
+				<LinkAssetsPreload assets={props.hydrationResources?.route?.preloads} />
 
-				<For each={props.styles}>{(href) => <link rel='stylesheet' href={href} />}</For>
-				{props.entry && <script type='module' src={props.entry} defer />}
+				<LinkStyles styles={props.hydrationResources?.entry.styles} />
+				<LinkStyles styles={props.hydrationResources?.route?.styles} />
+				<script type='module' src={props.hydrationResources?.entry.module} defer />
 			</head>
 			<body>
 				<div id='root'>

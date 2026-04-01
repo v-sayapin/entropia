@@ -1,9 +1,6 @@
-import type { AssetPreload } from 'src/shared/types/assets';
+import type { HydrationResources } from 'src/shared/types/hydrationResources';
 
 export type AppProps = {
 	url?: string;
-	entry?: string;
-	styles?: Array<string>;
-	modulePreloads?: Array<string>;
-	preloads?: Array<AssetPreload>;
+	hydrationResources?: HydrationResources;
 };
