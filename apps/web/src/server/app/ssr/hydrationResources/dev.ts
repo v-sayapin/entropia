@@ -52,9 +52,12 @@ export const createDevHydrationResourcesGetter = async (
 	const entry = `/${entryId}`;
 
 	return async () => ({
-		entry,
-		styles: await collectStyles(vite, entry),
-		modulePreloads: [],
-		preloads: [],
+		entry: {
+			module: entry,
+			styles: await collectStyles(vite, entry),
+			modulePreloads: [],
+			preloads: [],
+		},
+		route: null,
 	});
 };

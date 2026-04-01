@@ -12,7 +12,7 @@ export const getSsrProcessor = async (app: FastifyInstance): Promise<SsrProcesso
 	return async (request: FastifyRequest, reply: FastifyReply) => {
 		const [render, hydrationResources] = await Promise.all([
 			runtime.getRenderFunction(),
-			runtime.getHydrationResources(),
+			runtime.getHydrationResources(request.url),
 		]);
 
 		const body = new PassThrough();
@@ -23,7 +23,7 @@ export const getSsrProcessor = async (app: FastifyInstance): Promise<SsrProcesso
 		body.write('<!DOCTYPE html>');
 
 		const stream = render({
-			...hydrationResources,
+			hydrationResources,
 			url: request.url,
 		});
 
