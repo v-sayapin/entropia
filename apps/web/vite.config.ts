@@ -38,7 +38,7 @@ export default defineConfig(({ isSsrBuild }) => ({
 		minify: !isSsrBuild,
 		sourcemap: isSsrBuild || process.env.NODE_ENV !== 'production' ? 'hidden' : false,
 		rolldownOptions: {
-			input: resolve(srcDir, isSsrBuild ? 'render.tsx' : 'hydrate.tsx'),
+			input: resolve(srcDir, isSsrBuild ? 'render.ts' : 'hydrate.tsx'),
 		},
 		outDir: isSsrBuild ? 'dist/server' : 'dist/client',
 		emptyOutDir: false,

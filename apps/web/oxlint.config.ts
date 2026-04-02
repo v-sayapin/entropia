@@ -44,13 +44,13 @@ export default defineConfig({
 
 	overrides: [
 		{
-			files: ['src/client/**/*.{ts,tsx}', 'src/hydrate.tsx', 'src/render.tsx'],
+			files: ['src/client/**/*.{ts,tsx}', 'src/hydrate.tsx'],
 			env: { browser: true, es2022: true },
 			jsPlugins: [{ name: 'solid', specifier: import.meta.resolve('eslint-plugin-solid') }],
 			rules: solid.rules,
 		},
 		{
-			files: ['src/server/**/*.ts', 'tools/**/*.ts', '*.config.ts'],
+			files: ['src/server/**/*.ts', 'src/render.ts', 'tools/**/*.ts', '*.config.ts'],
 			env: { node: true, es2024: true },
 		},
 	],

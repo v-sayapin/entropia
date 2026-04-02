@@ -1,10 +1,7 @@
-import type { renderToStream } from 'solid-js/web';
+import type { DocumentProps } from 'src/shared/types/app';
+import type { RenderStream } from 'src/shared/types/renderer';
 
-import type { AppProps } from 'src/shared/types/app';
-
-type RenderStream = ReturnType<typeof renderToStream>;
-
-type RenderFunction = (props: AppProps) => RenderStream;
+type RenderFunction = (props: DocumentProps) => RenderStream;
 
 export type RenderModule = {
 	render: RenderFunction;

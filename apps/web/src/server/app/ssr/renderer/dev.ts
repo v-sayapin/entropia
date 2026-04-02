@@ -6,7 +6,7 @@ import type { ViteDevServer } from 'vite';
 import type { RenderModule } from 'src/server/app/ssr/renderer/types';
 import { rootDir } from 'src/server/utils/env';
 
-const devRenderEntry = resolve(rootDir, 'src/render.tsx');
+const devRenderEntry = resolve(rootDir, 'src/render.ts');
 
 export const createDevRendererGetter = async (vite: ViteDevServer) => {
 	const ssrEnvironment = vite.environments.ssr;
