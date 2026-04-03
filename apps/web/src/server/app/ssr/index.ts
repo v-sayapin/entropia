@@ -13,16 +13,16 @@ export const getSsrProcessor = async (app: FastifyInstance) => {
 			runtime.getHydrationResources(request.url),
 		]);
 
-		const body = new PassThrough();
-
 		reply.header('Cache-Control', 'no-store');
 		reply.type('text/html; charset=utf-8');
 
+		const body = new PassThrough();
 		body.write('<!DOCTYPE html>');
 
 		const stream = render({
 			hydrationResources,
 			url: request.url,
+			nonce: reply.cspNonce.script,
 		});
 
 		stream.pipe(body);

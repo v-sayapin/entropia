@@ -2,5 +2,6 @@ import type { HydrationResources } from 'src/shared/types/hydrationResources';
 
 export type AppProps = {
 	url?: string;
+	nonce?: string;
 	hydrationResources?: HydrationResources;
 };

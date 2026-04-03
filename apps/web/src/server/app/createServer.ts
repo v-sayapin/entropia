@@ -1,5 +1,6 @@
 import Fastify from 'fastify';
 
+import { helmetPlugin } from 'src/server/app/plugins/helmet';
 import { staticPlugin } from 'src/server/app/plugins/static';
 import { getSsrProcessor } from 'src/server/app/ssr';
 
@@ -8,6 +9,8 @@ export const createServer = async () => {
 		logger: true,
 		exposeHeadRoutes: false,
 	});
+
+	await app.register(helmetPlugin);
 
 	if (process.env.NODE_ENV === 'production') {
 		await app.register(staticPlugin);

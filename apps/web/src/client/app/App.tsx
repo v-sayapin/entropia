@@ -20,7 +20,7 @@ export const App = (props: AppProps) => {
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 				<title>entropia</title>
 
-				<HydrationScript />
+				<HydrationScript {...(props.nonce ? { nonce: props.nonce } : {})} />
 
 				<LinkStylesPreload styles={props.hydrationResources?.entry.styles} highPriority />
 				<LinkModulesPreload
@@ -40,7 +40,12 @@ export const App = (props: AppProps) => {
 
 				<LinkStyles styles={props.hydrationResources?.entry.styles} />
 				<LinkStyles styles={props.hydrationResources?.route?.styles} />
-				<script type='module' src={props.hydrationResources?.entry.module} defer />
+				<script
+					type='module'
+					src={props.hydrationResources?.entry.module}
+					defer
+					{...(props.nonce ? { nonce: props.nonce } : {})}
+				/>
 			</head>
 			<body>
 				<div id='root'>
