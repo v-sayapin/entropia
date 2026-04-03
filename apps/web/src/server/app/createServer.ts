@@ -1,6 +1,7 @@
 import Fastify from 'fastify';
 import type { FastifyInstance } from 'fastify';
 
+import { connectionTimeoutMs, keepAliveTimeoutMs, requestTimeoutMs } from 'server/app/env';
 import { cspNoncePlugin } from 'server/app/plugins/cspNonce';
 import { helmetPlugin } from 'server/app/plugins/helmet';
 import { rateLimitPlugin } from 'server/app/plugins/rateLimit';
@@ -20,6 +21,9 @@ export const createServer = async (): Promise<FastifyInstance> => {
 				removeAdditional: false,
 			},
 		},
+		connectionTimeout: connectionTimeoutMs,
+		requestTimeout: requestTimeoutMs,
+		keepAliveTimeout: keepAliveTimeoutMs,
 	});
 
 	await app.register(rateLimitPlugin);
