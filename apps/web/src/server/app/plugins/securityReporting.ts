@@ -1,3 +1,4 @@
+import plugin from 'fastify-plugin';
 import type { FastifyPluginAsync } from 'fastify';
 
 import { SECURITY_REPORT_DEFINITIONS } from 'server/app/security/reporting/definitions';
@@ -9,7 +10,12 @@ import {
 } from 'server/app/security/reporting/parser';
 import { REPORT_RESPONSE_SCHEMA } from 'server/app/security/reporting/schema';
 
-export const securityReportingPlugin: FastifyPluginAsync = async (app) => {
+const SECURITY_REPORTING_RATE_LIMIT_CONFIG = {
+	max: 30,
+	timeWindow: '1 minute',
+} as const;
+
+const securityReportingPluginDecorator: FastifyPluginAsync = async (app) => {
 	app.addContentTypeParser(
 		REPORT_CONTENT_TYPE,
 		{ parseAs: 'string', bodyLimit: REPORT_BODY_LIMIT_BYTES },
@@ -26,6 +32,9 @@ export const securityReportingPlugin: FastifyPluginAsync = async (app) => {
 		app.post<{ Body: unknown }>(
 			`/${endpoint}`,
 			{
+				config: {
+					rateLimit: SECURITY_REPORTING_RATE_LIMIT_CONFIG,
+				},
 				schema: {
 					body: schema,
 					response: REPORT_RESPONSE_SCHEMA,
@@ -45,3 +54,9 @@ export const securityReportingPlugin: FastifyPluginAsync = async (app) => {
 		)
 	);
 };
+
+export const securityReportingPlugin = plugin(securityReportingPluginDecorator, {
+	name: 'security-reporting',
+	dependencies: ['rate-limit'],
+	encapsulate: true,
+});

@@ -7,6 +7,7 @@ declare global {
 			PORT?: string;
 			VITE_HOST?: string;
 			VITE_PORT?: string;
+			TRUST_PROXY?: string;
 		}
 	}
 }

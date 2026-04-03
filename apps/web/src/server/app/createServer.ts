@@ -3,6 +3,7 @@ import type { FastifyInstance } from 'fastify';
 
 import { cspNoncePlugin } from 'server/app/plugins/cspNonce';
 import { helmetPlugin } from 'server/app/plugins/helmet';
+import { rateLimitPlugin } from 'server/app/plugins/rateLimit';
 import { securityHeadersPlugin } from 'server/app/plugins/securityHeaders';
 import { securityReportingPlugin } from 'server/app/plugins/securityReporting';
 import { ssrPlugin } from 'server/app/plugins/ssr';
@@ -21,6 +22,7 @@ export const createServer = async (): Promise<FastifyInstance> => {
 		},
 	});
 
+	await app.register(rateLimitPlugin);
 	await app.register(cspNoncePlugin);
 	await app.register(helmetPlugin);
 	await app.register(securityHeadersPlugin);
