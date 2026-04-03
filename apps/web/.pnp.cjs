@@ -30,6 +30,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@fastify/helmet", "npm:13.0.2"],\
           ["@fastify/middie", "npm:9.3.1"],\
+          ["@fastify/rate-limit", "npm:10.3.0"],\
           ["@fastify/static", "npm:9.0.0"],\
           ["@types/node", "npm:25.5.0"],\
           ["entropia", "workspace:."],\
@@ -913,6 +914,18 @@ const RAW_RUNTIME_STATE =
           ["@fastify/forwarded", "npm:3.0.1"],\
           ["@fastify/proxy-addr", "npm:5.1.0"],\
           ["ipaddr.js", "npm:2.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@fastify/rate-limit", [\
+      ["npm:10.3.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@fastify-rate-limit-npm-10.3.0-85283495e9-10c0.zip/node_modules/@fastify/rate-limit/",\
+        "packageDependencies": [\
+          ["@fastify/rate-limit", "npm:10.3.0"],\
+          ["@lukeed/ms", "npm:2.0.2"],\
+          ["fastify-plugin", "npm:5.1.0"],\
+          ["toad-cache", "npm:3.7.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2562,6 +2575,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@fastify/helmet", "npm:13.0.2"],\
           ["@fastify/middie", "npm:9.3.1"],\
+          ["@fastify/rate-limit", "npm:10.3.0"],\
           ["@fastify/static", "npm:9.0.0"],\
           ["@types/node", "npm:25.5.0"],\
           ["entropia", "workspace:."],\
