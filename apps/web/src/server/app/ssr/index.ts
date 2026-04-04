@@ -17,13 +17,25 @@ export const getSsrProcessor = async (app: FastifyInstance) => {
 		reply.type('text/html; charset=utf-8');
 
 		const body = new PassThrough();
+		body.on('error', (error) => {
+			request.log.error(error, 'Server response stream error');
+			if (!reply.raw.destroyed) {
+				reply.raw.destroy();
+			}
+		});
+
 		body.write('<!DOCTYPE html>');
 
-		const stream = render({
-			hydrationResources,
-			url: request.url,
-			nonce: reply.cspNonce.script,
-		});
+		const stream = render(
+			{
+				hydrationResources,
+				url: request.url,
+				nonce: reply.cspNonce.script,
+			},
+			{
+				onError: (error) => request.log.error(error, 'SSR render error'),
+			}
+		);
 
 		stream.pipe(body);
 
