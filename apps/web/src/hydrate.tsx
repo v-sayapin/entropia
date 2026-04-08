@@ -5,6 +5,8 @@ import type { ParentComponent } from 'solid-js';
 
 import { App } from 'client/app/App';
 
+import 'client/app/styles/reset.css';
+
 const rootElement = document.getElementById('root');
 if (!rootElement) {
 	throw new Error('Missing #root element for hydration');

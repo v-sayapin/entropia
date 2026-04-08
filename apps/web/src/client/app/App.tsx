@@ -1,5 +1,3 @@
-/* @refresh reload */
-
 import type { Component } from 'solid-js';
 
 import type { AppProps } from 'shared/app/types';

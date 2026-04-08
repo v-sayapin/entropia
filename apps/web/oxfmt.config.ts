@@ -23,12 +23,17 @@ export default defineConfig({
 
 	sortPackageJson: false,
 	sortImports: {
-		internalPattern: ['client/', 'server/', 'shared/'],
+		internalPattern: ['src/', 'client/', 'server/', 'shared/'],
 		customGroups: [
 			{
-				groupName: 'assets',
-				elementNamePattern: ['**/*.{avif,jpeg,jpg,png,svg,webp}'],
+				groupName: 'internal-asset',
+				elementNamePattern: ['client/**/*.{avif,jpeg,jpg,png,svg,webp}'],
 				selector: 'import',
+			},
+			{
+				groupName: 'internal-style',
+				elementNamePattern: ['client/**/*.css'],
+				selector: 'style',
 			},
 			{
 				groupName: 'shared',
@@ -84,7 +89,8 @@ export default defineConfig({
 			{ newlinesBetween: false },
 			['type-server', 'type-client'],
 
-			'assets',
+			'internal-asset',
+			'internal-style',
 			'side_effect_style',
 			'unknown',
 		],
