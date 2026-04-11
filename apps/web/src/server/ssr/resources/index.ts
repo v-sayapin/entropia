@@ -1,8 +1,8 @@
 import type { FastifyInstance } from 'fastify';
 import type { ViteDevServer } from 'vite';
 
-import { createProdHydrationResourcesGetter } from 'server/app/ssr/hydrationResources/prod';
-import type { HydrationResourcesGetter } from 'server/app/ssr/hydrationResources/types';
+import { createProdHydrationResourcesGetter } from 'server/ssr/resources/prod';
+import type { HydrationResourcesGetter } from 'server/ssr/resources/types';
 
 export const createHydrationResourcesGetter = async (
 	clientDistDir: string,
@@ -14,7 +14,6 @@ export const createHydrationResourcesGetter = async (
 	}
 
 	const vite = app.getDecorator<ViteDevServer>('vite');
-	const { createDevHydrationResourcesGetter } =
-		await import('server/app/ssr/hydrationResources/dev');
+	const { createDevHydrationResourcesGetter } = await import('server/ssr/resources/dev');
 	return createDevHydrationResourcesGetter(entryId, vite);
 };

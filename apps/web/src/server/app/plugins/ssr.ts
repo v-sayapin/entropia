@@ -1,7 +1,7 @@
 import plugin from 'fastify-plugin';
 import type { FastifyPluginAsync } from 'fastify';
 
-import { getSsrProcessor } from 'server/app/ssr';
+import { getSsrProcessor } from 'server/app/ssrProcessor';
 
 const SSR_RATE_LIMIT_CONFIG = {
 	max: 100,

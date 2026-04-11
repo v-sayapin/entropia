@@ -1,6 +1,6 @@
 import type { ViteDevServer } from 'vite';
 
-import type { HydrationResourcesGetter } from 'server/app/ssr/hydrationResources/types';
+import type { HydrationResourcesGetter } from 'server/ssr/resources/types';
 
 const isCssUrl = (url: string): boolean => {
 	const queryIndex = url.indexOf('?');

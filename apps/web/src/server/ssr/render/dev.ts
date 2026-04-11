@@ -6,7 +6,7 @@ import type { ViteDevServer } from 'vite';
 import type { RenderModule } from 'shared/app/types/render';
 
 import { rootDir } from 'server/app/env';
-import type { RenderFunctionGetter } from 'server/app/ssr/render/types';
+import type { RenderFunctionGetter } from 'server/ssr/render/types';
 
 const devModule = resolve(rootDir, 'src/render.tsx');
 

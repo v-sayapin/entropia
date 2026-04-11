@@ -5,8 +5,8 @@ import type { Manifest } from 'vite';
 
 import type { EntryResources, Resources } from 'shared/app/types/hydrationResources';
 
-import { getAssetPreloads } from 'server/app/ssr/hydrationResources/prod/assets';
-import type { HydrationResourcesGetter } from 'server/app/ssr/hydrationResources/types';
+import { getAssetPreloads } from 'server/ssr/resources/prod/assets';
+import type { HydrationResourcesGetter } from 'server/ssr/resources/types';
 
 type TransitiveResources = {
 	styles: ReadonlySet<string>;

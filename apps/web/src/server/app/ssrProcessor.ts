@@ -2,7 +2,7 @@ import { PassThrough } from 'node:stream';
 
 import type { FastifyInstance, FastifyReply, FastifyRequest } from 'fastify';
 
-import { createSsrRuntime } from 'server/app/ssr/runtime';
+import { createSsrRuntime } from 'server/ssr/runtime';
 
 type SsrProcessor = (request: FastifyRequest, reply: FastifyReply) => Promise<void>;
 
