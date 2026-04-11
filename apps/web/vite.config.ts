@@ -29,6 +29,7 @@ export default defineConfig(({ isSsrBuild }) => ({
 				],
 			}),
 	],
+	ssr: isSsrBuild ? { noExternal: true } : {},
 	build: {
 		manifest: !isSsrBuild,
 		copyPublicDir: !isSsrBuild,

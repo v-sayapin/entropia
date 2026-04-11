@@ -3,6 +3,7 @@ import type { FastifyInstance } from 'fastify';
 
 import { connectionTimeoutMs, keepAliveTimeoutMs, requestTimeoutMs } from 'server/app/env';
 import { cspNoncePlugin } from 'server/app/plugins/cspNonce';
+import { healthPlugin } from 'server/app/plugins/health';
 import { helmetPlugin } from 'server/app/plugins/helmet';
 import { rateLimitPlugin } from 'server/app/plugins/rateLimit';
 import { securityHeadersPlugin } from 'server/app/plugins/securityHeaders';
@@ -38,6 +39,8 @@ export const createServer = async (): Promise<FastifyInstance> => {
 		const { vitePlugin } = await import('server/app/plugins/vite');
 		await app.register(vitePlugin);
 	}
+
+	await app.register(healthPlugin);
 
 	await app.register(ssrPlugin);
 
