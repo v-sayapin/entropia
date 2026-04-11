@@ -105,16 +105,12 @@ const buildRouteResources = (
 	}
 
 	return {
-		styles: Array.from(transitive.styles)
-			.filter((item) => !entryResources.styles.has(item))
-			.sort(),
-		modulePreloads: Array.from(modulePreloads)
-			.filter((item) => !entryResources.modulePreloads.has(item) && item !== entryFile)
-			.sort(),
+		styles: Array.from(transitive.styles).filter((item) => !entryResources.styles.has(item)),
+		modulePreloads: Array.from(modulePreloads).filter(
+			(item) => !entryResources.modulePreloads.has(item) && item !== entryFile
+		),
 		preloads: getAssetPreloads(
-			Array.from(transitive.preloads)
-				.filter((item) => !entryResources.preloads.has(item))
-				.sort()
+			Array.from(transitive.preloads).filter((item) => !entryResources.preloads.has(item))
 		),
 	};
 };
@@ -149,9 +145,9 @@ const buildHydrationResourcesMap = async (
 	);
 
 	const entryResources = {
-		styles: Array.from(entryResourcesRaw.styles).sort(),
-		modulePreloads: Array.from(entryResourcesRaw.modulePreloads).sort(),
-		preloads: getAssetPreloads(Array.from(entryResourcesRaw.preloads).sort()),
+		styles: Array.from(entryResourcesRaw.styles),
+		modulePreloads: Array.from(entryResourcesRaw.modulePreloads),
+		preloads: getAssetPreloads(Array.from(entryResourcesRaw.preloads)),
 		module: entryFile,
 	};
 

@@ -39,10 +39,16 @@ const collectStyles = async (vite: ViteDevServer, entry: string): Promise<Array<
 			styles.add(module.url);
 		}
 
-		module.importedModules.forEach((dependency) => stack.push(dependency));
+		const dependencies = Array.from(module.importedModules);
+		for (let i = dependencies.length - 1; i >= 0; i -= 1) {
+			const dependency = dependencies[i];
+			if (dependency) {
+				stack.push(dependency);
+			}
+		}
 	}
 
-	return Array.from(styles).sort();
+	return Array.from(styles);
 };
 
 export const createDevHydrationResourcesGetter = async (
