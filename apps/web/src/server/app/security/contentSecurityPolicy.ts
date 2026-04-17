@@ -5,6 +5,7 @@ import type { FastifyRequest } from 'fastify';
 import type { CspNonce } from 'shared/app/types/security/contentSecurityPolicy';
 
 import { viteHost, vitePort } from 'server/app/env';
+import { CSP_REPORT } from 'server/app/security/reporting/definitions';
 
 const randomB64String = (): string => randomBytes(32).toString('base64');
 
@@ -43,6 +44,5 @@ export const buildCspHeader = (request: FastifyRequest, cspNonce: CspNonce): str
 
 		...(process.env.NODE_ENV === 'production' ? ['upgrade-insecure-requests'] : []),
 
-		// TODO: add csp endpoint for logging
-		// `report-to csp`
+		`report-to ${CSP_REPORT.endpoint}`,
 	].join('; ');

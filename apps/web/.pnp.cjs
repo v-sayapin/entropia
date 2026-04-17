@@ -42,6 +42,7 @@ const RAW_RUNTIME_STATE =
           ["oxfmt", "npm:0.46.0"],\
           ["oxlint", "virtual:7795c1567a8ad5b5ca8cf9511ac706ca0fa5ca7d446a7eb2a53a2f760156f6ecbb058c884f1674de68a1a3d484ced5f7404b8da8a5fe11a275697142f4fc53da#npm:1.61.0"],\
           ["rolldown", "npm:1.0.0-rc.16"],\
+          ["secure-json-parse", "npm:4.1.0"],\
           ["solid-js", "npm:1.9.12"],\
           ["stylelint", "npm:17.8.0"],\
           ["stylelint-config-recess-order", "virtual:7795c1567a8ad5b5ca8cf9511ac706ca0fa5ca7d446a7eb2a53a2f760156f6ecbb058c884f1674de68a1a3d484ced5f7404b8da8a5fe11a275697142f4fc53da#npm:7.7.0"],\
@@ -2543,6 +2544,7 @@ const RAW_RUNTIME_STATE =
           ["oxfmt", "npm:0.46.0"],\
           ["oxlint", "virtual:7795c1567a8ad5b5ca8cf9511ac706ca0fa5ca7d446a7eb2a53a2f760156f6ecbb058c884f1674de68a1a3d484ced5f7404b8da8a5fe11a275697142f4fc53da#npm:1.61.0"],\
           ["rolldown", "npm:1.0.0-rc.16"],\
+          ["secure-json-parse", "npm:4.1.0"],\
           ["solid-js", "npm:1.9.12"],\
           ["stylelint", "npm:17.8.0"],\
           ["stylelint-config-recess-order", "virtual:7795c1567a8ad5b5ca8cf9511ac706ca0fa5ca7d446a7eb2a53a2f760156f6ecbb058c884f1674de68a1a3d484ced5f7404b8da8a5fe11a275697142f4fc53da#npm:7.7.0"],\
