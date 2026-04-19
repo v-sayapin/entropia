@@ -5,9 +5,9 @@ import { cspNoncePlugin } from 'server/app/plugins/cspNonce';
 import { helmetPlugin } from 'server/app/plugins/helmet';
 import { securityHeadersPlugin } from 'server/app/plugins/securityHeaders';
 import { securityReportingPlugin } from 'server/app/plugins/securityReporting';
+import { ssrPlugin } from 'server/app/plugins/ssr';
 import { staticPlugin } from 'server/app/plugins/static';
 import { SECURITY_REPORTS_PREFIX } from 'server/app/security/reporting/endpoints';
-import { getSsrProcessor } from 'server/app/ssr';
 
 export const createServer = async (): Promise<FastifyInstance> => {
 	const app = Fastify({
@@ -33,9 +33,7 @@ export const createServer = async (): Promise<FastifyInstance> => {
 		await app.register(vitePlugin);
 	}
 
-	const ssrProcessor = await getSsrProcessor(app);
-
-	app.get('*', ssrProcessor);
+	await app.register(ssrPlugin);
 
 	return app;
 };
