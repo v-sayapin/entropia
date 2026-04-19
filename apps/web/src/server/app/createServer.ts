@@ -1,7 +1,9 @@
 import Fastify from 'fastify';
 import type { FastifyInstance } from 'fastify';
 
+import { cspNoncePlugin } from 'server/app/plugins/cspNonce';
 import { helmetPlugin } from 'server/app/plugins/helmet';
+import { securityHeadersPlugin } from 'server/app/plugins/securityHeaders';
 import { staticPlugin } from 'server/app/plugins/static';
 import { getSsrProcessor } from 'server/app/ssr';
 
@@ -11,7 +13,9 @@ export const createServer = async (): Promise<FastifyInstance> => {
 		exposeHeadRoutes: false,
 	});
 
+	await app.register(cspNoncePlugin);
 	await app.register(helmetPlugin);
+	await app.register(securityHeadersPlugin);
 
 	if (process.env.NODE_ENV === 'production') {
 		await app.register(staticPlugin);
