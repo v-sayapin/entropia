@@ -5,7 +5,7 @@ import plugin from 'fastify-plugin';
 import { createServer } from 'vite';
 import type { FastifyPluginAsync } from 'fastify';
 
-import { rootDir } from 'server/app/env';
+import { rootDir, viteHost, vitePort } from 'server/app/env';
 
 const cacheDir = resolve(rootDir, 'node_modules/.cache/vite');
 
@@ -16,6 +16,14 @@ const vitePluginDecorator: FastifyPluginAsync = async (app) => {
 		configLoader: 'runner',
 		appType: 'custom',
 		server: {
+			host: viteHost,
+			port: vitePort,
+			strictPort: true,
+			hmr: {
+				host: viteHost,
+				port: vitePort,
+				clientPort: vitePort,
+			},
 			middlewareMode: true,
 		},
 	});

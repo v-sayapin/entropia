@@ -3,6 +3,7 @@ import type { Component } from 'solid-js';
 
 type LinkStylesPreloadProps = {
 	styles: Array<string> | null | undefined;
+	nonce: string;
 	highPriority?: boolean;
 };
 
@@ -14,6 +15,7 @@ export const LinkStylesPreload: Component<LinkStylesPreloadProps> = (props) => (
 				href={href}
 				as='style'
 				type='text/css'
+				nonce={props.nonce}
 				fetchpriority={props.highPriority ? 'high' : 'auto'}
 			/>
 		)}

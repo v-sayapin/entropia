@@ -5,6 +5,8 @@ declare global {
 			NODE_ENV?: 'production';
 			HOST?: string;
 			PORT?: string;
+			VITE_HOST?: string;
+			VITE_PORT?: string;
 		}
 	}
 }

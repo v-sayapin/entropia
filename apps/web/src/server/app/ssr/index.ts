@@ -24,6 +24,7 @@ export const getSsrProcessor = async (app: FastifyInstance): Promise<SsrProcesso
 
 		const stream = render({
 			hydrationResources,
+			cspNonce: reply.cspNonce,
 			url: request.url,
 		});
 

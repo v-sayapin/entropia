@@ -28,6 +28,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@fastify/helmet", "npm:13.0.2"],\
           ["@fastify/middie", "npm:9.3.2"],\
           ["@fastify/static", "npm:9.1.3"],\
           ["@types/connect", "npm:3.4.38"],\
@@ -867,6 +868,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@fastify-forwarded-npm-3.0.1-03d48a4e5e-fad9f7fb7f.zip/node_modules/@fastify/forwarded/",\
         "packageDependencies": [\
           ["@fastify/forwarded", "npm:3.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@fastify/helmet", [\
+      ["npm:13.0.2", {\
+        "packageLocation": "./.yarn/cache/@fastify-helmet-npm-13.0.2-d2f1bf0627-d0dbabdd3c.zip/node_modules/@fastify/helmet/",\
+        "packageDependencies": [\
+          ["@fastify/helmet", "npm:13.0.2"],\
+          ["fastify-plugin", "npm:5.1.0"],\
+          ["helmet", "npm:8.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2517,6 +2529,7 @@ const RAW_RUNTIME_STATE =
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@fastify/helmet", "npm:13.0.2"],\
           ["@fastify/middie", "npm:9.3.2"],\
           ["@fastify/static", "npm:9.1.3"],\
           ["@types/connect", "npm:3.4.38"],\
@@ -3201,6 +3214,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hashery", "npm:1.5.1"],\
           ["hookified", "npm:1.15.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["helmet", [\
+      ["npm:8.1.0", {\
+        "packageLocation": "./.yarn/cache/helmet-npm-8.1.0-a2193b660c-94d3a7ebc8.zip/node_modules/helmet/",\
+        "packageDependencies": [\
+          ["helmet", "npm:8.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
